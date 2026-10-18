@@ -7,14 +7,19 @@ export class Search extends DivComponent {
         this.state = state;
     }
 
+    search() {
+        const value = this.el.querySelector('input').value;
+        this.state.searchQuery = value;
+    }
+
     render() {
         this.el.classList.add('search');
-        this.el.innerHTML = ` 
+        this.el.innerHTML = `   
             <div class="search__wrapper">
                 <input type="text" 
-                    placeholder="Найти песню или исполнителя..."
+                    placeholder="Найти книгу или автора..."
                     class="search__input"
-                    value="${this.state.searchQuery ? this.searchQuery : ''}"
+                    value="${this.state.searchQuery}"
                 />
                 <img src="/static/search.svg" alt="Поиск" />
             </div>
@@ -22,6 +27,12 @@ export class Search extends DivComponent {
                 <img src="/static/input-search.svg" alt="Поиск" />
             </button>
         `
-        return this.el
+        this.el.querySelector('button').addEventListener('click', this.search.bind(this));
+        this.el.querySelector('input').addEventListener('keydown', (e) => {
+            if (e.code === 'Enter') {
+                this.search();
+            }
+        });
+        return this.el;
     }
 }

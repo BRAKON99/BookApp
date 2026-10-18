@@ -1,31 +1,32 @@
 {
-  "name": "musicapp",
-  "version": "1.0.0",
-  "description": "-",
-  "type": "module",
-  "keywords": [
-    "music"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "-"
-  },
-  "license": "ISC",
-  "author": "Sergey Kondratev",
-  "main": "app.js",
-  "scripts": {
-    "build": "rollup -c --watch",
-    "start": "live-server"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "eslint": "^9.38.0",
-    "globals": "^16.4.0",
-    "rollup": "^4.52.5",
-    "rollup-plugin-import-css": "^4.1.0"
-  },
-  "dependencies": {
-    "on-change": "^6.0.1"
-  }
+	"name": "bookapp",
+	"version": "1.0.0",
+	"description": "-",
+	"type": "module",
+	"keywords": [
+		"music"
+	],
+	"repository": {
+		"type": "git",
+		"url": "-"
+	},
+	"license": "ISC",
+	"author": "Sergey Kondratev",
+	"main": "app.js",
+	"scripts": {
+		"build": "rollup -c --watch",
+		"start": "live-server"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.38.0",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-node-resolve": "^16.0.3",
+		"eslint": "^9.38.0",
+		"globals": "^16.4.0",
+		"rollup": "^4.52.5",
+		"rollup-plugin-import-css": "^4.1.0"
+	},
+	"dependencies": {
+		"on-change": "^6.0.1"
+	}
 }
